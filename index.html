@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>When will California fall into the Ocean?</title>
+  <meta charset="utf-8">
+  <meta name="description" content="When will California fall into the Ocean?">
+  <meta name="author" content="Adam F Clark">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>When will California fall into the Ocean?</h1>
+    <h2>A Data Science Class Project</h2>
+    <p>Adam F Clark<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>California... When will it go?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Super Snazzy and Jazzy Inferface!</p></li>
+<li><p>You can learn the probability that California will fall into the ocean by a date you specify!</p></li>
+<li><p>It slices, it dices, it simply takes the date you specify and the probability of an Earthquake on any given day - and Whoosh!  Math is done!</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How to use this tool</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Go to this site: <a href="https://adamfclark.shinyapps.io/DevelopingDataProducts">https://adamfclark.shinyapps.io/DevelopingDataProducts</a></li>
+<li>Select a date in the future (the future is so exciting!)</li>
+<li>Enter the probability that an Earthquake will happen on any given day - don&#39;t know?  Neither does the tool!  Just make it up!</li>
+<li>Click the &#39;Submit&#39; button</li>
+<li>Oooh and Aaah over the resulting calculation</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What are critics saying about this tool?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>&quot;Best thing since sliced bread!&quot; - Abraham Lincoln</p></li>
+<li><p>&quot;I didn&#39;t know, but now I do!&quot; - Barrack Obama</p></li>
+<li><p>&quot;I was just trying to eat my breakfast in peace.&quot; - Dad</p></li>
+<li><p>&quot;I get no respect, I tell ya.&quot; - Rodney Dangerfield</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Under the covers</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>So what does the tool really do?</li>
+<li>Let &#39;dailyProb&#39; (or p in the equation below) be the probability of the event occuring each day</li>
+<li>Let &#39;deltaDate&#39; (or d in the equation below) be the number of days in teh future of the specified date</li>
+<li>It simply solves the equation: \(1-(1-p)^d\)</li>
+<li>Using R, the code looks like this:</li>
+</ul>
+
+<pre><code class="r">dailyProb = 0.01
+deltaDate = 20
+1-((1-dailyProb)^deltaDate)
+</code></pre>
+
+<pre><code>## [1] 0.1820931
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='California... When will it go?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How to use this tool'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What are critics saying about this tool?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Under the covers'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
